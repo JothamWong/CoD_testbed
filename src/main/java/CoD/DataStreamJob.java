@@ -59,7 +59,7 @@ public class DataStreamJob {
                     }
                 })
                 .sum(1)
-                .print();
+                .print().setParallelism(1);
         // Execute program, beginning computation.
         env.execute("Socket WordCount");
     }
